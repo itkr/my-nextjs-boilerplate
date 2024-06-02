@@ -4,15 +4,26 @@ import React from "react";
 import {
   Box,
   Text,
+  UnorderedList,
+  ListItem,
+  Link,
+  Container,
+  Heading,
 } from '@chakra-ui/react';
-
-// import { Page } from "@shopify/polaris";
 
 export default function PageComponent() {
   return (
-    <Box>
-      <Text variant="heading">Page</Text>
+    <Container backgroundColor="gray.100" padding="4" borderRadius="md">
+      <Heading>Page title</Heading>
       <Text>Page content</Text>
-    </Box>
+      <UnorderedList>
+        <ListItem>
+          <Link href="/spam">Spam</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/list">List</Link>
+        </ListItem>
+      </UnorderedList>
+    </Container>
   );
 }
